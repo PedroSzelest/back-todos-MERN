@@ -1,0 +1,7 @@
+Dependences to install in server:
+
+express
+mongoose
+body-parser
+cors
+nodemon
