@@ -2,8 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
+import dotenv from "dotenv";
 
 import todoRoutes from "./routes/todos.js";
+
+dotenv.config()
 
 const app = express();
 
@@ -14,7 +17,7 @@ app.use(cors());
 app.use("/todos", todoRoutes);
 
 const CONNECTION_URL =
-  "mongodb+srv://sofia123:sofia123@first-mern.keau6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  `mongodb+srv://sofia123:${process.env.PASSWORD_DB}@first-mern.keau6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const PORT = process.env.PORT || 2000;
 
 mongoose

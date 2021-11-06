@@ -1,3 +1,6 @@
+node_modules
+.env
+
 Dependences to install in server:
 
 express
